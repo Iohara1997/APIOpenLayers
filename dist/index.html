@@ -5,26 +5,33 @@
     <title>Draw and Modify Features</title>
     <link rel="stylesheet" href="/style.78032849.css">
     <link rel="stylesheet" href="/bootstrap.min.2e858bcc.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
   <script src="/style.78032849.js"></script><script src="/bootstrap.min.2e858bcc.js"></script><link rel="stylesheet" href="/js.00a46daa.css"></head>
   <body>
     <div class="principal">
-        <div id="map" class="map"></div>
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
-            </li>
-        </ul>
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
-            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+      <div id="map" class="map"></div>
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+          ...
         </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          ...
+        </div>
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+          ...
+        </div>
+      </div>
     </div>
     <form class="form-inline">
       <label for="type">Geometry type &nbsp;</label>
@@ -36,8 +43,28 @@
       </select>
     </form>
     <div id="popup" class="ol-popup">
-        <a href="#" id="popup-closer" class="ol-popup-closer"></a>
-        <div id="popup-content"></div>
+      <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+      <div id="popup-content"></div>
+    </div>
+    <div class="pdf">
+      <form class="form">
+        <label for="format">Page size </label>
+        <select id="format">
+          <option value="a0">A0 (slow)</option>
+          <option value="a1">A1</option>
+          <option value="a2">A2</option>
+          <option value="a3">A3</option>
+          <option value="a4" selected="">A4</option>
+          <option value="a5">A5 (fast)</option>
+        </select>
+        <label for="resolution">Resolution </label>
+        <select id="resolution">
+          <option value="72">72 dpi (fast)</option>
+          <option value="150">150 dpi</option>
+          <option value="300">300 dpi (slow)</option>
+        </select>
+      </form>
+      <button class="btn btn-info" id="export-pdf">Export PDF</button>
     </div>
     <script src="/js.00a46daa.js"></script>
   </body>

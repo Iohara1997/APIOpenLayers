@@ -8,7 +8,7 @@
 }
 .map {
   width: 70%;
-  height: 750px;
+  height: 520px;
 }
 .ol-popup {
   position: absolute;
@@ -51,4 +51,7 @@
 }
 .ol-popup-closer:after {
   content: "✖";
+}
+.pdf{
+  margin-top: 5px;
 }
