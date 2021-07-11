@@ -96102,13 +96102,13 @@ var vector = new _layer.Vector((_VectorLayer = {
     color: 'rgba(255, 255, 255, 0.2)'
   }),
   stroke: new _style.Stroke({
-    color: '#ffcc33',
+    color: '#3a33ff',
     width: 2
   }),
   image: new _style.Circle({
     radius: 7,
     fill: new _style.Fill({
-      color: '#ffcc33'
+      color: '#3a33ff'
     })
   })
 })), _VectorLayer));
@@ -96257,7 +96257,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50298" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63421" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -67,13 +67,13 @@ var vector = new VectorLayer({
       color: 'rgba(255, 255, 255, 0.2)',
     }),
     stroke: new Stroke({
-      color: '#ffcc33',
+      color: '#3a33ff',
       width: 2,
     }),
     image: new CircleStyle({
       radius: 7,
       fill: new Fill({
-        color: '#ffcc33',
+        color: '#3a33ff',
       }),
     }),
   }),
